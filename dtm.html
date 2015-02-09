@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Celestial YML</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	
+	 <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Celestial Network YAML Documentation</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Components <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Map Info</li>
+				<li><a href="basics.html">Basic Info</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Gamemode Types</li>
+                  <li><a href="dtm.html">Destroy The Monument</a></li>
+                  <li><a href="ctw.html">Capture The Wool</a></li>
+                  <li><a href="tdm.html">Team Death Match</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Game Settings</li>
+                  <li><a href="teams.html">Teams</a></li>
+                  <li><a href="spawns.html">Spawns</a></li>
+                  <li><a href="loudouts.html">Loadouts</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Other</li>
+                  <li><a href="regions.html">Regions</a></li>				  
+                </ul>
+              </li>
+              <li><a href="reference.html">Reference</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+	  <div class="jumbotron">
+		<h1>Components</h1>
+		<p>All the essential components necessary when building a YAML</p>
+	  </div>
+	  <blockquote>
+	  <h2>Destroy The Monument</h2>
+	  </blockquote>
+	  <p>The objective of Destroy The Monument is to destroy the opposing team's block (commonly obsidian). This may be reffered to as the objective and multiple objectives may be set per map.</p>
+	  <p>Monuments must be set and defined under each teams configuration section. The team must destroy the monuments listed under the team config.</p>
+	  <p><strong>Note: A maximum of 2 teams may be set for a Destroy The Monument map</strong></p>
+	  <pre><code>teams:
+  lime:
+    spawn: 30.5,48,-854.5,0,0
+    title: Lime
+    monuments: # these monuments must be destroyed by lime
+      a: # the id of the monument must be unique from one another
+        name: Flag Tower
+        location: 20,70,-569 # the coordinate of the obsidian block
+      b:
+        name: Watch Tower
+        location: 36,65,-561
+      c:
+        name: Bell Tower
+        location: 43,57,-582
+  red:
+    spawn: 33.5,48,-561.5,180,0
+    title: Red
+    monuments: # these monuments must be destroyed by red
+      a:
+        name: Flag Tower
+        location: 42,70,-849
+      b:
+        name: Watch Tower
+        location: 26,65,-857
+      c:
+        name: Bell Tower
+        location: 19,57,-836
+	  </code></pre>
+	  
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
