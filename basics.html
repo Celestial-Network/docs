@@ -34,7 +34,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Components <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -61,10 +61,24 @@
         </div><!--/.container-fluid -->
       </nav>
 	  <div class="jumbotron">
-		<h1>Celestial Network YAML Documentation</h1>
-		<p>The essential guide for making maps for The Celestial Network</p>
-		<p><a class="btn btn-primary btn-lg" href="basics.html" role="button">Let's get started!</a></p>
+		<h1>Components</h1>
+		<p>All the essential components necessary when building a YAML</p>
 	  </div>
+	  
+	  <br>
+	  <h2>Map Info Section</h2>
+	  <br>
+	  <p>This section tells the plugin the most basic information about your map. It is essential and all following information is <b>required</b> on every map</p>
+	  <pre><code>info:
+   name: 'Exampler'
+   world: 'example'
+   version: '1.0'
+   type: 'dtm'
+   creators:
+   - 'SubzeroCode'
+   - 'Notch'
+   spawn: 125,64,5,0,0 #Spectator Spawn   
+	  </code></pre>
 	  
 
 
