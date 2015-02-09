@@ -40,11 +40,7 @@
                 <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header">Map Info</li>
 				<li><a href="basics.html">Basic Info</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Gamemode Types</li>
-                  <li><a href="dtm.html">Destroy The Monument</a></li>
-                  <li><a href="ctw.html">Capture The Wool</a></li>
-                  <li><a href="tdm.html">Team Death Match</a></li>
+                  <li><a href="gamemodes.html">Gamemodes</a></li>
                   <li class="divider"></li>
                   <li class="dropdown-header">Game Settings</li>
                   <li><a href="teams.html">Teams</a></li>
@@ -65,11 +61,16 @@
 		<p>All the essential components necessary when building a YAML</p>
 	  </div>
 	  <blockquote>
-	  <h2>Destroy The Monument</h2>
+	  <h2>Gamemodes</h2>
+	  </blockquote>
+		<h4>For each of the following gamemodes it is essential that you set the value of <code>type:</code> to the value in the <code>code</code> box.</h4>
+	  <blockquote>
+	  <h2>Destroy The Monument <code>dtm</code></h2>
 	  </blockquote>
 	  <p>The objective of Destroy The Monument is to destroy the opposing team's block (commonly obsidian). This may be reffered to as the objective and multiple objectives may be set per map.</p>
 	  <p>Monuments must be set and defined under each teams configuration section. The team must destroy the monuments listed under the team config.</p>
 	  <p><strong>Note: A maximum of 2 teams may be set for a Destroy The Monument map</strong></p>
+	  <p>Below shows an example team configuration a dtm map</p>
 	  <pre><code>teams:
   lime:
     spawn: 30.5,48,-854.5,0,0
