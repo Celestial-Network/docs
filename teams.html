@@ -60,28 +60,36 @@
 		<p>All the essential components necessary when building a YAML</p>
 	  </div>
 	  <blockquote>
-	  <h2>Map Info Section</h2>
+	  <h2>Teams</h2>
 	  </blockquote>
-	  <p>This section tells the plugin the most basic information about your map. All the following components are <b>required</b> on every map</p>
-	  <pre><code>info:
-   name: 'Exampler'
-   world: 'example'
-   version: '1.0'
-   type: dtm
-   creators:
-   - SubzeroCode
-   - Notch
-   spawn: 125,64,5,0,0 #Spectator Spawn   
-	  </code></pre>
+	  <p>Teams are an essential part of the Celestial Network YAML. I will show you a step by step guide to defining teams with YAML</p>
+	  <br>
+	  <p><b>1)</b> Below the map info section define your teams.</p>
+	  <pre><code>teams:</code></pre>
 	  
-	  <blockquote>
-	  <h3>Map Types</h3>
-	  </blockquote>
-	  <h4><code>dtm</code> = Destroy The Monument</h4>
-	  <br>
-	  <h4><code>ctw</code> = Capture The Wool</h4>
-	  <br>
-	  <h4><code>tdm</code> = Team Death Match</h4>
+	  <p><b>2)</b> Indent the next section and define your first team.</p>
+	  <pre><code>teams:
+  red:</code></pre>
+  
+	  <p><b>3)</b> Indent in again and define some of your teams characteristics. You can also define some gamemode objectives here such as where the wool should be placed in Capture The Wool.</p>
+	  <pre><code>teams:
+  red:
+    title: 'Evil'
+    spawn: 50,25,5,90,0
+    max: 25</code></pre>
+	<p><code>title: 'Evil'</code> defines the title of the team and is the team name that will be shown in the chat.</p>
+	<p><code>spawn: 50,25,5,90,0</code> tells the plugin where the team will spawn. It follows the format X,Y,Z,Yaw,Pitch.</p>
+	<p><code>max: 25</code> tells the plugin that the maximum number of players for that team is 25.</p>
+	<p><b>4)</b> Now do the same for the other team</p>
+	<pre><code>teams:
+  red:
+    title: 'Evil'
+    spawn: 50,25,5,90,0
+    max: 25
+  yellow:
+    title: 'Happy'
+    spawn: 56,25,4,90,0
+    max: 25</code></pre>
 	  	<!--Footer-->
 	<br>
 	<center>

@@ -34,7 +34,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Components <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -44,7 +44,6 @@
                   <li class="divider"></li>
                   <li class="dropdown-header">Game Settings</li>
                   <li><a href="teams.html">Teams</a></li>
-                  <li><a href="spawns.html">Spawns</a></li>
                   <li><a href="loudouts.html">Loadouts</a></li>
                   <li class="divider"></li>
                   <li class="dropdown-header">Other</li>
@@ -61,9 +60,10 @@
 		<p>All the essential components necessary when building a YAML</p>
 	  </div>
 	  <blockquote>
-	  <h2>Gamemodes</h2>
+	  <h2><b>Gamemodes</b></h2>
+	  <h4>For each of the following gamemodes it is essential that you set the value of <code>type:</code> to the value in the <code>code</code> box.</h4>
 	  </blockquote>
-		<h4>For each of the following gamemodes it is essential that you set the value of <code>type:</code> to the value in the <code>code</code> box.</h4>
+	  <!--DTM-->
 	  <blockquote>
 	  <h2>Destroy The Monument <code>dtm</code></h2>
 	  </blockquote>
@@ -99,9 +99,69 @@
         name: Bell Tower
         location: 19,57,-836
 	  </code></pre>
+	  <!--/DTM-->
 	  
-
-
+	  <!--CTW-->
+	  <blockquote>
+	  <h2>Capture The Wool <code>ctw</code></h2>
+	  </blockquote>
+	  <p>Capture The Wool has the objective of returning a block of wool which is commonly collected in a wool room on the opposing teams side, and place it in a monument box also known as the Victroy Monument.</p>
+	  <p>Wools must be set and defined under each teams configuration section. The team must must place the wools in the correct location specified listed under the team config.</p>
+	  <p>Below shows an example team configuration a capture the wool map</p>
+	  <pre><code>teams:
+  red:
+    spawn: 292.5,25,-55.5,90,0
+    title: Red
+    max: 25
+    wools:
+      orange:
+        name: Orange Wool
+        chest: -5,37,4
+        monument: 292,25,-62
+      pink:
+        name: Pink Wool
+        chest: -49,34,-56
+        monument: 298,25,-56
+      green:
+        name: Green Wool
+        chest: -5,37,-116
+        monument: 292,25,-50
+  yellow:
+    spawn: 24.5,25,-55.5,-90,0
+    title: Yellow
+    max: 25
+    wools:
+      cyan:
+        name: Cyan Wool
+        chest: 321,37,-116
+        monument: 24,25,-50
+      purple:
+        name: Purple Wool
+        chest: 365,34,-56
+        monument: 18,25,-56
+      lime:
+        name: Lime Wool
+        chest: 321,37,4
+        monument: 24,25,-62
+	</code></pre>
+	<!--/CTW-->
+	
+	<!--TDM-->
+	  <blockquote>
+	  <h2>Team Death Match <code>tdm</code></h2>
+	  </blockquote>
+	  <p>In Team Death Match a maximum of 4 teams compete with each other each with the aim of getting the highest amount of kills in 10 minutes. Each kill will score a point and the teams total points is shown on the scoreboard.</p>
+	  <p>Team Death Match requires no additional parts to the YAML</p>
+	<!--/TDM-->
+	
+	<!--Footer-->
+	<br>
+	<center>
+		<h5>Copyright 2015, Celestial Network</h5>
+	</center>
+	<br>
+	<!--/Footer-->
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
